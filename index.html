@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Frosty</title>
-    <meta name="description" content="Vegan Ice Creams is the Future">
-    <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
-    
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Pinyon+Script" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles-merged.css">
-    <link rel="stylesheet" href="css/style.min.css">
 
-    <!--[if lt IE 9]>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frosty</title>
+  <meta name="description" content="Vegan Ice Creams is the Future">
+  <meta name="keywords"
+    content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Pinyon+Script" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles-merged.css">
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <!--[if lt IE 9]>
       <script src="js/vendor/html5shiv.min.js"></script>
       <script src="js/vendor/respond.min.js"></script>
     <![endif]-->
 
-    <link href="css/jquery.mb.YTPlayer.css" media="all" rel="stylesheet" type="text/css">
+  <link href="css/jquery.mb.YTPlayer.css" media="all" rel="stylesheet" type="text/css">
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-    <script src="js/jquery.mb.YTPlayer.min.js"></script>
-    <script>
-      alert(1);
-      $(function(){
-        alert(2);
-        $("#bgndVideo").YTPlayer();
-      });
-    </script>
-  </head>
-  <body>
-    
-    <div id="bgndVideo" class="player" data-property="{videoURL:'http://youtu.be/BsekcY04xvQ',containment:'body',autoPlay:true, mute:true, startAt:0, opacity:1}">My video</div>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script src="js/jquery.mb.YTPlayer.min.js"></script>
+</head>
 
-    <script src="js/scripts.min.js"></script>
-    <script src="js/custom.min.js"></script>
+<body>
 
-  </body>
+  <div id="bgndVideo" class="player"
+    data-property="{videoURL:'http://youtu.be/BsekcY04xvQ',containment:'body',autoPlay:true, mute:true, startAt:0, opacity:1}">
+    My video</div>
+
+  <script src="js/scripts.min.js"></script>
+  <script src="js/custom.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      //your code here
+      $("#bgndVideo").YTPlayer();
+    });
+  </script>
+
+</body>
+
 </html>
