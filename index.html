@@ -1,98 +1,309 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Porto - Tailwind Template</title>
+    <link rel="stylesheet" href="assets/css/tailwind.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"
+      integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
+  <body class="bg-gray-100">
+    <section class="py-10 md:py-16">
+      <div class="container max-w-screen-xl mx-auto px-4">
 
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-  -->
-  <base href="/">
+        <div class="text-center">
+          <div class="flex justify-center mb-16">
+            <!-- <img src="assets/image/profile-pic.jpeg" alt="Image" /> -->
+            <img class="inline-block size-10 rounded-full ring-2 ring-white" src="assets/image/resized profile pic.jpeg" alt="">
+          </div>
 
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+          <h6
+            class="font-medium text-gray-600 text-lg md:text-2xl uppercase mb-8"
+          >
+            Sainath Balaguru Surender
+          </h6>
 
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="sqlite_sample">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+          <h1
+            class="font-normal text-gray-900 text-4xl md:text-7xl leading-none mb-8"
+          >
+            Senior Dotnet Developer
+          </h1>
 
-  <title>sqlite_sample</title>
-  <link rel="manifest" href="manifest.json">
-</head>
-<body>
-  <!-- This script installs service_worker.js to provide PWA functionality to
-       application. For more information, see:
-       https://developers.google.com/web/fundamentals/primers/service-workers -->
-  <script>
-    var serviceWorkerVersion = '2584147080';
-    var scriptLoaded = false;
-    function loadMainDartJs() {
-      if (scriptLoaded) {
-        return;
-      }
-      scriptLoaded = true;
-      var scriptTag = document.createElement('script');
-      scriptTag.src = 'main.dart.js';
-      scriptTag.type = 'application/javascript';
-      document.body.append(scriptTag);
-    }
+          <p class="font-normal text-gray-600 text-md md:text-xl mb-16">
+            11+ years of experience in software development, specializing in
+            .NET, Angular, AWS, and Azure.
+          </p>
 
-    if ('serviceWorker' in navigator) {
-      // Service workers are supported. Use them.
-      window.addEventListener('load', function () {
-        // Wait for registration to finish before dropping the <script> tag.
-        // Otherwise, the browser will load the script multiple times,
-        // potentially different versions.
-        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
-        navigator.serviceWorker.register(serviceWorkerUrl)
-          .then((reg) => {
-            function waitForActivation(serviceWorker) {
-              serviceWorker.addEventListener('statechange', () => {
-                if (serviceWorker.state == 'activated') {
-                  console.log('Installed new service worker.');
-                  loadMainDartJs();
-                }
-              });
-            }
-            if (!reg.active && (reg.installing || reg.waiting)) {
-              // No active web worker and we have installed or are installing
-              // one for the first time. Simply wait for it to activate.
-              waitForActivation(reg.installing ?? reg.waiting);
-            } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
-              // When the app updates the serviceWorkerVersion changes, so we
-              // need to ask the service worker to update.
-              console.log('New service worker available.');
-              reg.update();
-              waitForActivation(reg.installing);
-            } else {
-              // Existing service worker is still good.
-              console.log('Loading app from service worker.');
-              loadMainDartJs();
-            }
-          });
+          <a
+            href="mailto:sainath040189@gmail.com"
+            class="px-7 py-3 md:px-9 md:py-4 font-medium md:font-semibold bg-gray-700 text-gray-50 text-sm rounded-md hover:bg-gray-50 hover:text-gray-700 transition ease-linear duration-500"
+            >Hire me</a
+          >
+        </div>
+      </div>
+    </section>
 
-        // If service worker doesn't succeed in a reasonable amount of time,
-        // fallback to plaint <script> tag.
-        setTimeout(() => {
-          if (!scriptLoaded) {
-            console.warn(
-              'Failed to load app from service worker. Falling back to plain <script> tag.',
-            );
-            loadMainDartJs();
-          }
-        }, 4000);
-      });
-    } else {
-      // Service workers not supported. Just drop the <script> tag.
-      loadMainDartJs();
-    }
-  </script>
-</body>
+    <section class="py-10 md:py-16">
+      <div class="container max-w-screen-xl mx-auto px-4">
+        <div class="flex flex-col lg:flex-row justify-between">
+          <div class="mb-10 lg:mb-0">
+            <h1 class="font-medium text-gray-700 text-3xl md:text-4xl mb-5">
+              Certifications
+            </h1>
+
+            <p class="font-normal text-gray-500 text-xs md:text-base">
+              I have brought here my extensive expertise, demonstrated by my
+              <br />
+              Certifications.
+            </p>
+          </div>
+
+          <div class="space-y-24">
+            <div class="flex space-x-6">
+              <h1 class="font-normal text-gray-700 text-3xl md:text-4xl">01</h1>
+
+              <span class="w-28 h-0.5 bg-gray-300 mt-5"></span>
+
+              <div>
+                <h1 class="font-normal text-gray-700 text-3xl md:text-4xl mb-5">
+                  AWS Associate Solution Architect
+                </h1>
+
+                <p class="font-normal text-gray-500 text-sm md:text-base">
+                    Associate designs and deploys scalable, highly
+                  <br />
+                   available and fault-tolerant systems.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex space-x-6">
+              <h1 class="font-normal text-gray-700 text-3xl md:text-4xl">02</h1>
+
+              <span class="w-28 h-0.5 bg-gray-300 mt-5"></span>
+
+              <div>
+                <h1 class="font-normal text-gray-700 text-3xl md:text-4xl mb-5">
+                  AWS Cloud Practitioner
+                </h1>
+
+                <p class="font-normal text-gray-500 text-sm md:text-base">
+                    A foundational understanding of AWS Cloud 
+                  <br />
+                  concepts, services, and terminology.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex space-x-6">
+              <h1 class="font-normal text-gray-700 text-3xl md:text-4xl">03</h1>
+
+              <span class="w-28 h-0.5 bg-gray-300 mt-5"></span>
+
+              <div>
+                <h1 class="font-normal text-gray-700 text-3xl md:text-4xl mb-5">
+                  Azure AZ-900
+                </h1>
+
+                <p class="font-normal text-gray-500 text-sm md:text-base">
+                    A foundational level knowledge of cloud services and how
+                  <br />
+                   those services are provided with Microsoft Azure.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex space-x-6">
+              <h1 class="font-normal text-gray-700 text-3xl md:text-4xl">03</h1>
+
+              <span class="w-28 h-0.5 bg-gray-300 mt-5"></span>
+
+              <div>
+                <h1 class="font-normal text-gray-700 text-3xl md:text-4xl mb-5">
+                  SAFe® 4 Practitioner
+                </h1>
+
+                <p class="font-normal text-gray-500 text-sm md:text-base">
+                    A Certified SAFe 4 Practitioner (SP) is a SAFe team member 
+                  <br />
+                  professional responsible for using Scrum, Kanban, and XP in a SAFe environment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-10 md:py-16">
+        <div class="container max-w-screen-xl mx-auto px-4">
+          <h1 class="font-medium text-gray-700 text-3xl md:text-4xl mb-5">
+            Experience
+          </h1>
+  
+          <p class="font-normal text-gray-500 text-xs md:text-base mb-20">
+            Below is a summary of the places I worked
+          </p>
+  
+          <div class="flex flex-col lg:flex-row justify-between">
+            <div class="space-y-8 md:space-y-16 mb-16 md:mb-0">
+              <h6 class="font-medium text-gray-400 text-base uppercase">
+                Company
+              </h6>
+  
+              <p class="font-semibold text-gray-600 text-base">
+                GES GlobalAdvantage
+                <span class="font-normal text-gray-300">/ Dallas, TX</span>
+              </p>
+  
+              <p class="font-semibold text-gray-600 text-base">
+                Karvy Computer Share
+                <span class="font-normal text-gray-300">/ Huntsville, AL</span>
+              </p>
+  
+              <p class="font-semibold text-gray-600 text-base">
+                Luminance Recovery
+                <span class="font-normal text-gray-300">/ Louisville, KY</span>
+              </p>
+            </div>
+  
+            <div class="space-y-8 md:space-y-16 mb-16 md:mb-0">
+              <h6 class="font-medium text-gray-400 text-base uppercase">
+                Position
+              </h6>
+  
+              <p class="font-normal text-gray-400 text-base">
+                Lead Dotnet Developer
+              </p>
+  
+              <p class="font-normal text-gray-400 text-base">
+                Senior Dotnet Developer
+              </p>
+  
+              <p class="font-normal text-gray-400 text-base">
+                Software Developer
+              </p>
+            </div>
+  
+            <div class="space-y-8 md:space-y-16">
+              <h6 class="font-medium text-gray-400 text-base uppercase">Year</h6>
+  
+              <p class="font-normal text-gray-400 text-base">Apr 2018 - Jan 2025</p>
+  
+              <p class="font-normal text-gray-400 text-base">Aug 2018 - Apr 2019</p>
+  
+              <p class="font-normal text-gray-400 text-base">Mar 2014 - Aug 2017</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <section class="py-10 md:py-16">
+      <div class="container max-w-screen-xl mx-auto px-4">
+        <h1 class="font-medium text-gray-700 text-3xl md:text-4xl mb-5">
+          Education
+        </h1>
+
+        <p class="font-normal text-gray-500 text-xs md:text-base mb-20">
+          Below is a summary of the places I studied
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-gray-50 px-8 py-10 rounded-md">
+            <h4 class="font-medium text-gray-700 text-lg mb-4">2006 – 2010</h4>
+
+            <p class="font-normal text-gray-500 text-md mb-4">
+              Bachelor of Technology <br />
+              JNTUH College of Engineering <br />
+              Electrical and Electronics Engineering.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 px-8 py-10 rounded-md">
+            <h4 class="font-medium text-gray-700 text-lg mb-4">2004 – 2006</h4>
+
+            <p class="font-normal text-gray-500 text-md mb-4">
+              High School <br />
+              Loyola Academy <br />
+              Specialized in Mathes, Physics and Chemistry.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 px-8 py-10 rounded-md">
+            <h4 class="font-medium text-gray-700 text-lg mb-4">1990 – 2004</h4>
+
+            <p class="font-normal text-gray-500 text-md mb-4">
+              School <br />
+              St Andrews High School <br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-10 md:py-16 mb-20 md:mb-40 lg::mb-52">
+      <div class="container max-w-screen-xl mx-auto px-4">
+        <div class="text-center">
+          <h1 class="font-medium text-gray-700 text-4xl md:text-5xl mb-5">
+            Testimonial
+          </h1>
+
+          <p class="font-normal text-gray-400 text-md md:text-lg mb-20">
+            I demonstrates exceptional cloud expertise and professionalism, backed by AWS and Azure certifications but feel free to contact
+            me for any <br />
+            other inquiries.
+          </p>
+
+          <div class="flex items-center justify-center space-x-8">
+            <a target="_blank"
+              href="https://www.linkedin.com/in/sainath-surender/"
+              class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500"
+            >
+              <i
+                data-feather="linkedin"
+                class="text-gray-500 hover:text-gray-800 transition ease-in-out duration-500"
+              ></i>
+            </a>
+
+            <a target="_blank"
+              href="https://github.com/sainathsurender"
+              class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500"
+            >
+              <i
+                data-feather="github"
+                class="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500"
+              ></i>
+            </a>
+
+            <a target="_blank"
+              href="mailto:sainath040189@gmail.com"
+              class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500"
+            >
+              <i
+                data-feather="at-sign"
+                class="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500"
+              ></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      feather.replace();
+    </script>
+  </body>
 </html>
